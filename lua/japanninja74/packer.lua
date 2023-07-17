@@ -49,6 +49,11 @@ return require('packer').startup(function(use) -- Packer can manage itself
         {run = ':TSUpdate'}
     )
 
+
+    -- 
+    --
+    -- vim-startuptime
+    use ('dstein64/vim-startuptime')
     -- View treesitter information directly in Neovim!
     use ('nvim-treesitter/playground')
     -- Lightweight alternative to context.vim implemented with nvim-treesitter.
@@ -109,6 +114,14 @@ return require('packer').startup(function(use) -- Packer can manage itself
         {'L3MON4D3/LuaSnip'},     -- Required
     }
     }
+   
+    -- A plugin used to display all available luasnip in telescope
+    use {
+        "benfowler/telescope-luasnip.nvim",
+        module = "telescope._extensions.luasnip",  -- if you wish to lazy-load
+    }
+
+
 
 
 end)

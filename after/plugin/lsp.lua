@@ -1,3 +1,13 @@
+--    _                               _        _      _____ _  _
+--   (_) __ _ _ __   __ _ _ __  _ __ (_)_ __  (_) __ |___  | || |
+--   | |/ _` | '_ \ / _` | '_ \| '_ \| | '_ \ | |/ _` | / /| || |_
+--   | | (_| | |_) | (_| | | | | | | | | | | || | (_| |/ / |__   _|
+--  _/ |\__,_| .__/ \__,_|_| |_|_| |_|_|_| |_|/ |\__,_/_/     |_|
+-- |__/      |_|                            |__/
+--
+-- LSP configuration
+
+
 local lsp = require('lsp-zero').preset({})
 
 lsp.on_attach(function(client, bufnr)
@@ -20,7 +30,7 @@ cmp.setup({
         ['<CR>']    = cmp.mapping.confirm({select = false}),
 --        ['<C-k>']   = cmp.mapping.select_prev_item({behavior = cmp.SelectBehavior.Select}),
 --        ['<C-j>']   = cmp.mapping.select_next_item({behavior = cmp.SelectBehavior.Select}),
-        ['<C-j>']   = cmp_action.luasnip_supertab(),
-        ['<C-k>'] = cmp_action.luasnip_shift_supertab(),
+--        ['<C-j>']   = cmp_action.luasnip_supertab(),
+--        ['<C-k>'] = cmp_action.luasnip_shift_supertab(),
     }
 })
